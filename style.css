@@ -145,3 +145,9 @@ h2 {
 .message-box.show {
     display: block;
 }
+
+@media (max-width:320px) {
+    .container{
+        margin-top: -20px;
+    }
+}
