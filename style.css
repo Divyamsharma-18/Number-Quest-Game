@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('Stars.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+h2 {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes the full height */
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+.overlay {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    width: 320px;
+    height: 530px;
+    background-color: rgba(103, 103, 103, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.message-box {
+    margin-bottom: 300px;
+    width: 200px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.key {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: #bcbcbd;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.key::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(33, 2, 69, 0.3);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease, width 0.6s ease, height 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.key:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+
+.key.enter {
+    color: white;
+    padding: 12px;
+    width: 260px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1d013b;
+}
+
+.submit {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#userGuessInput {
+    height: 100px;
+    width: 230px;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+}
+
+.key:hover {
+    color: white;
+}
+
+.white {
+    color: rgba(255, 255, 255, 0.858);
+}
+
+.message-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.message-box.show {
+    display: block;
+}

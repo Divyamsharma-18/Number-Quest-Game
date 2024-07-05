@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <h2>Guess the number between 1 and 100!</h2>
+            <input type="text" id="userGuessInput">
+            <p id="userGuessDisplay"></p>
+            
+            <div class="keypad">
+                
+                <button class="key" onclick="addToGuess(1)">1</button>
+                <button class="key" onclick="addToGuess(2)">2</button>
+                <button class="key" onclick="addToGuess(3)">3</button>
+                <button class="key" onclick="addToGuess(4)">4</button>
+                <button class="key" onclick="addToGuess(5)">5</button>
+                <button class="key" onclick="addToGuess(6)">6</button>
+                <button class="key" onclick="addToGuess(7)">7</button>
+                <button class="key" onclick="addToGuess(8)">8</button>
+                <button class="key" onclick="addToGuess(9)">9</button>
+                <button class="key white" onclick="backspace()">Back</button>
+                <button class="key" onclick="addToGuess(0)">0</button>
+                <button class="key white" onclick="cancelInput()">Cancel</button>
+            </div>
+                <div >
+                    <div class="submit">
+                        <button class="key  enter" onclick="checkGuess()">Enter</button>
+                    </div>
+            </div>
+            
+            <div class="message-box" id="messageBox"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
