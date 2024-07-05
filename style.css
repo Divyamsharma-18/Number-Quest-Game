@@ -147,7 +147,7 @@ h2 {
 }
 
 @media (max-width:320px) {
-    .container{
+    .overlay{
         margin-top: -20px;
     }
 }
